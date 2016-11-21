@@ -1,13 +1,18 @@
 
 
 public class Car{
-
+	
+	private String error;
 	private String ID;
 	private String licensePlate;
 	private String ownerID;
 	private String gasUsage;
 	private int seats;
 
+	public Car (String errorMsg){
+		error = errorMsg;
+	}
+	
 	public Car (String ID, String licensePlate, String ownerID, String gasUsage, int seats){
 
 		this.ID = ID;
@@ -17,6 +22,8 @@ public class Car{
 		this.seats = seats;
 
 	}
+	
+	
 
 	public String getID() {
 		return ID;

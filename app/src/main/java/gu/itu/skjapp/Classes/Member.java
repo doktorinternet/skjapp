@@ -65,7 +65,11 @@ public class Member{
 	}
 	
 	public String getUserName (Member member){
-		return member.userName;
+		if (member.userName != null){
+			return member.userName;
+		}else{
+			return Error.errorMsg[0];
+		}
 	}
 	
 	public String getPassWord (Member member){
@@ -85,7 +89,11 @@ public class Member{
 	}
 	
 	public Car getCar(Member member){
-		return member.car;
+		if (member.car != null){			
+			return member.car;
+		}else{
+			return Car(Error.errorMsg[0]);
+
 	}
 	
 }
