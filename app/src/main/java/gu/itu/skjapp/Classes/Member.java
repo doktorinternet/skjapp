@@ -1,5 +1,6 @@
 public class Member{
 	
+	private String error;
 	private String IDNumber;
 	private String firstName;
 	private String surName;
@@ -39,32 +40,52 @@ public class Member{
 		
 	}
 	
-	void setAddress(Address address, Member member){
+	public void setAddress(Address address, Member member){
 		member.address = address;
 	}
 	
-	void setUserName(String userName, Member member){
+	public void setUserName(String userName, Member member){
 		member.userName = userName;
 	}
 	
-	void setPassWord(String passWord, Member member){
+	public void setPassWord(String passWord, Member member){
 		member.passWord = passWord;
 	}
 	
-	void setPhoneNr(String phoneNr, Member member){
+	public void setPhoneNr(String phoneNr, Member member){
 		member.phoneNr = phoneNr;
 	}
 	
-	void setEMail(String eMail, Member member){
+	public void setEMail(String eMail, Member member){
 		member.eMail = eMail;
 	}
 	
-	void setCar(Car car, Member member){
+	public void setCar(Car car, Member member){
 		member.car = car;
 	}
 	
+	public String getUserName (Member member){
+		return member.userName;
+	}
 	
+	public String getPassWord (Member member){
+		if (member.passWord != null){
+			return member.passWord;
+		}else{
+			return Error.errorMsg[0];
+		}
+	}
 	
+	public Address getAddress(Member member){
+		if (member.address != null){
+			return member.address;
+		}else{
+			return Address(Error.errorMsg[0]);
+		}
+	}
 	
+	public Car getCar(Member member){
+		return member.car;
+	}
 	
 }
