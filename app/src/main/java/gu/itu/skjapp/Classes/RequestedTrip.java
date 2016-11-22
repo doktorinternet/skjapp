@@ -1,4 +1,5 @@
 /*
+ *
  * Extends class Trip, adds functionality to store information about
  * trips requested by passengers.
  *

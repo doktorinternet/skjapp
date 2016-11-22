@@ -1,6 +1,8 @@
-/*
- * Creates an object address to assign to members and trips 
- */
+/*																
+ * 																
+ * Creates an object address to assign to members and trips 	
+ * 																
+ */															
 
 public class Address{
 	

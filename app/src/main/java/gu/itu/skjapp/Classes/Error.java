@@ -1,6 +1,8 @@
 /*
+ *
  * Handles errors and gives errormessages. 
  * Add functionaliy for exceptions?
+ *
  */
 
 public class Error{
