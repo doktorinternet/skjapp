@@ -1,5 +1,8 @@
 /*
- * Creates an object containing information regarding vehicles used by members.
+ *
+ * Creates an object containing information regarding vehicles 
+ * used by members.
+ *
  */
 
 public class Car{
@@ -12,7 +15,8 @@ public class Car{
 	private int seats;
 
 	public Car (String errorMsg){
-		error = errorMsg + ", USE setAddress(Address, Member) to assign address";
+		error = errorMsg + ", USE setAddress(Address," + 
+						   " Member) to assign address";
 	}
 	
 	public Car (String ID, String licensePlate, String ownerID, String gasUsage, int seats){

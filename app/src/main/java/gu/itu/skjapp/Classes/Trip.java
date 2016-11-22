@@ -1,10 +1,10 @@
 /*
-
-	This class is a superclass to AvailableTrip and RequestedTrip,
-	and implements general methods for both of these. It contains 
-	information about specific trips to and from geographical places.
-
-*/
+ *
+ *	This class is a superclass to AvailableTrip and RequestedTrip,
+ *	and implements general methods for both of these. It contains 
+ *	information about specific trips to and from geographical places.
+ *
+ */
 
 public class Trip{
 	

@@ -1,6 +1,6 @@
 /*
+ *
  * Class extends Date, implements functionality for class Error.
- * 
  *
  */
 

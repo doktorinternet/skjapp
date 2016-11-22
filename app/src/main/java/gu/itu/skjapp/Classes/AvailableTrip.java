@@ -1,5 +1,7 @@
-/*
+/* 
+ * 
  * Inherits class Trip. Stores information about trips made by drivers
+ * 
  * 
  */
 

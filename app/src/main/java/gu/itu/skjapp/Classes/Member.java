@@ -1,5 +1,7 @@
 /*
+ * 
  * Handles information regarding users of the application.
+ * 
  */
 
 public class Member{
