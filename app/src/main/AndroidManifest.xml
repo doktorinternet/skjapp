@@ -19,9 +19,7 @@
             android:name=".select_role"
             android:label="@string/title_activity_select_role"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".AddTripActivity"
-            android:label="@string/title_activity_add_trip"></activity>
+        <activity android:name=".Presentation.AddTripActivity"></activity>
     </application>
 
 </manifest>
