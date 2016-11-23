@@ -7,7 +7,7 @@
 
 public class RequestedTrip extends Trip{
 	
-	//private ArrayList <Member> passengers =  //vad var nu syntax för Arraylist?
+	private ArrayList<Member> passengers =  new ArrayList<Member>;
 
 /* 	private Member passenger;
 	private Member passenger;

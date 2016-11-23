@@ -6,12 +6,9 @@ package gu.itu.skjapp;
  * TODO extrahera och formatera information från en datakälla.
  * TODO Visa denna information i ett GUI
  * TODO Hantera inmatad information i GUI
- *      
+ *
  *
  *
  */
-
-
-
 
 public class NOTESandTODO{}
