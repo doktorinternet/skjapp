@@ -4,21 +4,28 @@
  * Add functionaliy for exceptions?
  *
  */
+package gu.itu.skjapp.Classes;
 
+ 
 public class Error{
 	
+	private Error error = new Error();
 	
-	public String status; 
-	public String msg[] = {
+	private String status;
+	
+	private String[] msg = {
 		"ERROR 0: NO DATA REGISTERED",
 		"ERROR 1: BLABLABLAFAULT",
 		"ERROR 2: BLABLABLAFAULT",
 		"ERROR 3: BLABLABLAFAULT"
 	};
 	
-	// public Error(int status){
-		// this.status = msg[status];
-	// }
+	private Error(){}
+	
+	public Error getInstance(int curStatus){
+		error.status = msg[curStatus];
+		return error.status; 
+	}
 	
 	
 }

@@ -3,6 +3,7 @@
  * Creates an object address to assign to members and trips 	
  * 																
  */															
+package gu.itu.skjapp.Classes;
 
 public class Address{
 	
@@ -14,8 +15,8 @@ public class Address{
 
 	public Address(){}
 	
-	public Address(String errorMsg){
-		error = errorMsg + ", USE setAddress(Address, Member) to assign address";
+	public Address(Error errorMsg){
+		error = errorMsg.getInstance(0) + ", USE setAddress(Address, Member) to assign address";
 	}
 	
 	public Address(String city){

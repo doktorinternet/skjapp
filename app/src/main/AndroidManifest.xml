@@ -16,10 +16,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".select_role"
-            android:label="@string/title_activity_select_role"
+            android:name="gu.itu.skjapp.Presentation.AddTripActivity"
+            android:label="@string/title_activity_add_trip"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Presentation.AddTripActivity"></activity>
     </application>
-
 </manifest>
