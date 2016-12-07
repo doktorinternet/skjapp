@@ -21,28 +21,28 @@
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
             android:ems="10"
-            android:id="@+id/startAddressET" />
+            android:id="@+id/startAddressET"
+            android:text="This field records start address" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:style="?android:attr/buttonBarStyle">
+            android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0px"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:style="?android:attr/buttonBarButtonStyle"
                 android:text="This calls Timepickerdialog"
-                android:id="@+id/startTPButton"
+                android:id="@+id/start_tp_button"
                 android:onClick="showTimePickerDialog" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0px"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Calls datepickerdialog"
-                android:id="@+id/startDPButton"
-                android:style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/start_dp_button"
                 android:onClick="showDatePickerDialog" />
 
         </LinearLayout>
@@ -52,30 +52,29 @@
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
             android:ems="10"
-            android:id="@+id/destinationAddressET" />
+            android:id="@+id/destinationAddressET"
+            android:text="This field records destination address" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:style="?android:attr/buttonBarStyle">
+            android:layout_height="match_parent">
 
             <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="This calls Timepickerdialog"
-            android:id="@+id/destinationTPButton"
-            android:onClick="showTimePickerDialog"
-            android:style="?android:attr/buttonBarButtonStyle"/>
+            android:id="@+id/destination_tp_button"
+            android:onClick="showTimePickerDialog"/>
 
             <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Calls datepickerdialog"
-            android:id="@+id/destinationDPButton"
-            android:onClick="showDatePickerDialog"
-            android:elevation="0dp"
-            android:style="?android:attr/buttonBarButtonStyle"/>
+            android:id="@+id/destination_dp_button"
+            android:onClick="showDatePickerDialog"/>
 
         </LinearLayout>
 
@@ -97,5 +96,15 @@
         android:text="Choose car to use"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/amtPassengerSpinner" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_trip_btn"
+        android:layout_below="@+id/selectCarSpinner"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

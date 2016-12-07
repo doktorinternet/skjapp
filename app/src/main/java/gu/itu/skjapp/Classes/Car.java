@@ -4,7 +4,9 @@
  * used by members.
  *
  */
-
+package gu.itu.skjapp.Classes;
+ 
+ 
 public class Car{
 	
 	private String error;

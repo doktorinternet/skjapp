@@ -3,7 +3,8 @@
  * Handles information regarding users of the application.
  * 
  */
-
+package gu.itu.skjapp.Classes;
+ 
 public class Member{
 	
 	private Error error;

@@ -5,7 +5,8 @@
  *	information about specific trips to and from geographical places.
  *
  */
-
+package gu.itu.skjapp.Classes;
+ 
 public class Trip{
 	
 	private String error;
@@ -35,7 +36,7 @@ public class Trip{
 		if(start != null){
 			return start;
 		}else{
-			return Address(Error.msg[0]);
+			return (new Address(Error.msg[0]));
 		}
 	}
 	

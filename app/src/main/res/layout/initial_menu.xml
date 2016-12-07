@@ -24,8 +24,36 @@
         android:text="Button"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="50dp"
         android:id="@+id/button5"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="177.5dp"
+        app:srcCompat="@drawable/bakgrund"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/pp"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Namn Namnsson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:fontFamily="sans-serif-condensed" />
+
+
 </RelativeLayout>

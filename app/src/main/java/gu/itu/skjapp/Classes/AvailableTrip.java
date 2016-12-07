@@ -4,6 +4,7 @@
  * 
  * 
  */
+package gu.itu.skjapp.Classes;
 
 public class AvailableTrip extends Trip{
 	

@@ -2,4 +2,11 @@
     <string name="app_name">Skjapp</string>
     <string name="k_r">Kör</string>
     <string name="res">Res</string>
+    <string name="title_activity_add_trip">Lägg till resa</string>
+    <string name="start_timepicker_label">Välj starttid för resa</string>
+    <string name="start_datepicker_label">Välj startdatum för resa</string>
+    <string name="destination_datepicker_label">Välj sluttid för resa</string>
+    <string name="destination_timepicker_label">Välj slutdatum för resa</string>
+    <string name="save_trip_label">Spara resa</string>
+    <string name="title_activity_show_available_trips">Map</string>
 </resources>

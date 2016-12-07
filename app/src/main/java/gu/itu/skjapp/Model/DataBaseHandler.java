@@ -1,3 +1,5 @@
+package gu.itu.skjapp.Model;
+
 import java.util.ArrayList;
 
 public class DataBaseHandler{
@@ -12,6 +14,4 @@ public class DataBaseHandler{
 		return dataBaseHandler;
 	}
 
-	public 
-	
 }

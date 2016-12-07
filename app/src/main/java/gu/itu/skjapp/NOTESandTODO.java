@@ -6,8 +6,8 @@ package gu.itu.skjapp;
  * TODO extrahera och formatera information från en datakälla.
  * TODO Visa denna information i ett GUI
  * TODO Hantera inmatad information i GUI
- *
- *
+ * Todo Remake error to simpleton class somehow. Make all other constructors take Error object reference somehow
+ * TODO GAMEIFICATE?!?!?! HUR :D:DD
  *
  */
 
