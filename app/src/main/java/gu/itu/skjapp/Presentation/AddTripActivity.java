@@ -20,10 +20,7 @@ import gu.itu.skjapp.R;
 
 public class AddTripActivity extends AppCompatActivity {
 
-    private Button startTPButton;
-    private Button startDPButton;
-    private Button destinationTPButton;
-    private Button destinationDPButton;
+    private Button startTPButton, startDPButton, destinationTPButton, destinationDPButton;
 
     @Override
     public void onBackPressed(){
@@ -34,43 +31,41 @@ public class AddTripActivity extends AppCompatActivity {
     View.OnClickListener startTPButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            showTimePickerDialog(v);
         }
     };
 
     View.OnClickListener startDPButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            showDatePickerDialog(v);
         }
     };
 
     View.OnClickListener destinationTPButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            DialogFragment newFragment = new TimePickerFragment();
-            newFragment.show(getSupportFragmentManager(), "timePicker");
+            showTimePickerDialog(v);
         }
     };
 
     View.OnClickListener destinationDPButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            DialogFragment newFragment = new DatePickerFragment();
-            newFragment.show(getSupportFragmentManager(), "datePicker");
+            showDatePickerDialog(v);
         }
     };
 
 
-   /* public void showDatePickerDialog(View v) {
+    public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
-    }*/
+    }
 
-    /*public void showTimePickerDialog(View v) {
+    public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
-    }*/
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
