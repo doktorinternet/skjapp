@@ -15,11 +15,11 @@ public class Address{
 
 	public Address(){}
 	
-	public Address(Error errorMsg){
-		error = errorMsg.getInstance(0) + ", USE setAddress(Address, Member) to assign address";
+	public Address(String errorMsg){
+		error = errorMsg.concat(", USE setAddress(Address, Member) to assign address");
 	}
 	
-	public Address(String city){
+	/*public Address(String city){
 		this.city = city;
 	}
 
@@ -41,7 +41,7 @@ public class Address{
 		this.houseNr = houseNr;
 		this.city 	 = city;
 		this.street  = street;
-	}
+	}*/
 
 	public Address(String street, String houseNr, String zipCode, String city){
 		this.street  = street;
@@ -55,10 +55,10 @@ public class Address{
 	}
 	
 	public String getStreet(){
-		if (street != null){			
+		if (street != null){
 			return street;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -70,7 +70,7 @@ public class Address{
 		if (zipCode != null){			
 			return zipCode;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -82,7 +82,7 @@ public class Address{
 		if (city != null){			
 			return city;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -94,7 +94,7 @@ public class Address{
 		if (houseNr != null){			
 			return houseNr;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -102,7 +102,7 @@ public class Address{
 		if(error != null){
 			return error;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 }

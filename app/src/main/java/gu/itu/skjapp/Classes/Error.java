@@ -9,11 +9,11 @@ package gu.itu.skjapp.Classes;
  
 public class Error{
 	
-	private Error error = new Error();
+	private static Error error = new Error();
 	
-	private String status;
+	public String status;
 	
-	private String[] msg = {
+	private static String[] msg = {
 		"ERROR 0: NO DATA REGISTERED",
 		"ERROR 1: BLABLABLAFAULT",
 		"ERROR 2: BLABLABLAFAULT",
@@ -22,9 +22,9 @@ public class Error{
 	
 	private Error(){}
 	
-	public Error getInstance(int curStatus){
+	public static Error getInstance(int curStatus){
 		error.status = msg[curStatus];
-		return error.status; 
+		return error;
 	}
 	
 	
