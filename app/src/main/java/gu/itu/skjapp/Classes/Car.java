@@ -40,7 +40,7 @@ public class Car{
 		if(ID != null){
 			return ID;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 
@@ -52,7 +52,7 @@ public class Car{
 		if(licensePlate != null){
 			return licensePlate;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 
@@ -64,7 +64,7 @@ public class Car{
 		if(ownerID != null){
 			return ownerID;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 
@@ -76,7 +76,7 @@ public class Car{
 		if(gasUsage != null){
 			return gasUsage;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 
@@ -84,11 +84,12 @@ public class Car{
 		this.gasUsage = gasUsage;
 	}
 
-	public int getSeats() {
-		if(seats != null){
-			return seats;
+	public String getSeats() { // TODO has to be parsed to int when used
+		String seatsString = Integer.toString(seats);
+		if(seatsString != null){
+			return seatsString;
 		}else{
-			return Error.msg(0);
+			return Error.getInstance(0).status;
 		}
 	}
 
@@ -100,7 +101,7 @@ public class Car{
 		if(error != null){
 			return error;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 }

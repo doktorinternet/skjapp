@@ -36,7 +36,7 @@ public class Trip{
 		if(start != null){
 			return start;
 		}else{
-			return (new Address(Error.msg[0]));
+			return new Address(Error.getInstance(0).status);
 		}
 	}
 	
@@ -48,7 +48,7 @@ public class Trip{
 		if(destination != null){
 			return destination;
 		}else{
-			return Address(Error.msg[0]);
+			return new Address(Error.getInstance(0).status);
 		}
 	}
 	
@@ -58,9 +58,9 @@ public class Trip{
 
 	public TripDate getDeparture(){
 		if(departure != null){
-			return destination;
+			return departure;
 		}else{
-			return TripDate(Error.msg[0]);
+			return new TripDate(Error.getInstance(0).status);
 		}
 	}
 	
@@ -72,7 +72,7 @@ public class Trip{
 		if(arrival!= null){
 			return arrival;
 		}else{
-			return TripDate(Error.msg[0]);
+			return new TripDate(Error.getInstance(0).status);
 		}
 	}	
 
@@ -80,7 +80,7 @@ public class Trip{
 		if(error != null){
 			return error;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 }

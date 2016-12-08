@@ -6,8 +6,8 @@
 package gu.itu.skjapp.Classes;
  
 public class Member{
-	
-	private Error error;
+
+	private String error;
 	private String IDNumber;
 	private String firstName;
 	private String surName;
@@ -17,19 +17,19 @@ public class Member{
 	private String phoneNr;
 	private String eMail;
 	private Car car;
-	
+
 	public Member (){}
-	
+
 	public Member (String errorMsg){
-		error = errorMsg;
+		error = Error.getInstance(0).status;
 	}
-	
+
 	public Member (String userName, String passWord){
 		this.userName = userName;
 		this.passWord = passWord;
 	}
-	
-	public Member (String ID, String firstName, String surName, String userName, String passWord, 
+
+	public Member (String ID, String firstName, String surName, String userName, String passWord,
 				   String eMail, String phoneNr, Address address, Car car){
 		this.IDNumber  = ID;
 		this.firstName = firstName;
@@ -41,7 +41,58 @@ public class Member{
 		this.eMail	   = eMail;
 		this.car	   = car;
 	}
-	
+
+	public void setIDNumber(String ID){
+		IDNumber = ID;
+	}
+
+	public String getIDNumber(){
+		if (IDNumber != null){
+			return IDNumber;
+		}else{
+			return Error.getInstance(0).status;
+		}
+	}
+	public void setName(String firstName, String surName){
+		this.firstName = firstName;
+		this.surName = surName;
+
+	}
+
+	public String getName(){
+		if (firstName != null && surName != null){
+			return firstName.concat(" ").concat(surName);
+		}else{
+			return Error.getInstance(0).status;
+		}
+	}
+
+
+	public void setFirstName(String name){
+		firstName = name;
+	}
+
+	public String getFirstName(){
+		if (firstName != null) {
+			return firstName;
+		}else{
+			return Error.getInstance(0).status;
+		}
+	}
+
+	public void setSurName(String name){
+		surName = name;
+	}
+
+	public String getSurName(){
+		if (surName != null) {
+			return surName;
+		}else{
+			return Error.getInstance(0).status;
+		}
+	}
+
+
 	public void setAddress(Address address){
 		this.address = address;
 	}
@@ -50,7 +101,7 @@ public class Member{
 		if (address != null){
 			return address;
 		}else{
-			return Address(Error.msg[0]);
+			return new Address(Error.getInstance(0).status);
 		}
 	}
 	
@@ -62,7 +113,7 @@ public class Member{
 		if (userName != null){
 			return userName;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -74,7 +125,7 @@ public class Member{
 		if (passWord != null){
 			return passWord;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -86,7 +137,7 @@ public class Member{
 		if (phoneNr != null){
 			return phoneNr;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -98,7 +149,7 @@ public class Member{
 		if (eMail != null){
 			return eMail;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}
 	
@@ -110,7 +161,7 @@ public class Member{
 		if (car != null){			
 			return car;
 		}else{
-			return Car(Error.msg[0]);
+			return new Car(Error.getInstance(0).status);
 		}
 	}
 
@@ -118,7 +169,7 @@ public class Member{
 		if(error != null){
 			return error;
 		}else{
-			return Error.msg[0];
+			return Error.getInstance(0).status;
 		}
 	}	
 }
