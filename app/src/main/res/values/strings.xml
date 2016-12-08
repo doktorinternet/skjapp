@@ -3,10 +3,15 @@
     <string name="k_r">Kör</string>
     <string name="res">Res</string>
     <string name="title_activity_add_trip">Lägg till resa</string>
-    <string name="start_timepicker_label">Välj starttid för resa</string>
-    <string name="start_datepicker_label">Välj startdatum för resa</string>
-    <string name="destination_datepicker_label">Välj sluttid för resa</string>
-    <string name="destination_timepicker_label">Välj slutdatum för resa</string>
-    <string name="save_trip_label">Spara resa</string>
+    <string name="label_start_timepicker_btn">Välj starttid för resa</string>
+    <string name="label_start_datepicker_btn">Välj startdatum för resa</string>
+    <string name="label_destination_datepicker_btn">Välj sluttid för resa</string>
+    <string name="label_destination_timepicker_btn">Välj slutdatum för resa</string>
+    <string name="label_save_trip">Spara resa</string>
     <string name="title_activity_show_available_trips">Map</string>
+    <string name="label_passenger_spinner">Välj antal medresenärer</string>
+    <string name="label_car_spinner">Välj bil</string>
+    <string name="label_save_trip_btn">Spara annons</string>
+    <string name="label_start_edittext">Startadress</string>
+    <string name="label_destination_edittext">Slutadress</string>
 </resources>

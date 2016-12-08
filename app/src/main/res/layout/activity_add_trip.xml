@@ -8,103 +8,116 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="gu.itu.skjapp.Presentation.AddTripActivity">
+    tools:context="gu.itu.skjapp.Presentation.AddTripActivity"
+    android:background="@color/light_grey">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/topLinearLayout">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:ems="10"
-            android:id="@+id/startAddressET"
-            android:text="This field records start address" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="This calls Timepickerdialog"
-                android:id="@+id/start_tp_button"
-                android:onClick="showTimePickerDialog" />
-
-            <Button
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Calls datepickerdialog"
-                android:id="@+id/start_dp_button"
-                android:onClick="showDatePickerDialog" />
-
-        </LinearLayout>
-
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:ems="10"
-            android:id="@+id/destinationAddressET"
-            android:text="This field records destination address" />
+            android:orientation="vertical" >
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/topLinearLayout"
+                android:paddingBottom="0px" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/start_address_edittext"
+                    android:text="@string/label_start_edittext" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_start_timepicker_btn"
+                        android:id="@+id/start_timepicker_btn"
+                        android:onClick="showTimePickerDialog" />
+
+                    <Button
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_start_datepicker_btn"
+                        android:id="@+id/start_destinationpicker_btn"
+                        android:onClick="showDatePickerDialog" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/destination_address_edittext"
+                    android:text="@string/label_destination_edittext" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <Button
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_destination_timepicker_btn"
+                    android:id="@+id/destination_timepicker_btn"
+                    android:onClick="showTimePickerDialog"/>
+
+                    <Button
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_destination_datepicker_btn"
+                    android:id="@+id/destination_destinationpicker_btn"
+                    android:onClick="showDatePickerDialog"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topLinearLayout"
+                android:layout_marginTop="50dp"
+                android:id="@+id/amt_passenger_spinner"
+                android:text="@string/label_passenger_spinner" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/select_car_spinner"
+                android:text="@string/label_car_spinner"
+                android:layout_below="@+id/amt_passenger_spinner" />
 
             <Button
-            android:layout_width="0px"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="This calls Timepickerdialog"
-            android:id="@+id/destination_tp_button"
-            android:onClick="showTimePickerDialog"/>
-
-            <Button
-            android:layout_width="0px"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Calls datepickerdialog"
-            android:id="@+id/destination_dp_button"
-            android:onClick="showDatePickerDialog"/>
+                android:text="@string/label_save_trip_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_trip_btn"
+                android:layout_below="@+id/select_car_spinner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="17dp"
+                android:layout_alignParentStart="true" />
 
         </LinearLayout>
-
-    </LinearLayout>
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/topLinearLayout"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="50dp"
-        android:id="@+id/amtPassengerSpinner"
-        android:text="Amount of passengers" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/selectCarSpinner"
-        android:text="Choose car to use"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/amtPassengerSpinner" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/save_trip_btn"
-        android:layout_below="@+id/selectCarSpinner"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="17dp"
-        android:layout_alignParentStart="true" />
+    </ScrollView>
 
 </RelativeLayout>
