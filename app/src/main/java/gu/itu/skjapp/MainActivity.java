@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent i = new Intent(getBaseContext(), AddTripActivity.class);
             startActivity(i);
+            finish();
         }
     };
 
@@ -24,5 +25,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        startAddTripActivityBtn = (Button) findViewById(R.id.start_add_trip_activity_btn);
+        assert startAddTripActivityBtn != null;
+        startAddTripActivityBtn.setOnClickListener(startAddTripActButtonListener);
+
     }
 }

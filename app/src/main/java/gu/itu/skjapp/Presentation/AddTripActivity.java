@@ -72,19 +72,19 @@ public class AddTripActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_trip);
 
-        startTPButton = (Button) findViewById(R.id.start_tp_button);
+        startTPButton = (Button) findViewById(R.id.start_timepicker_btn);
         assert startTPButton != null;
         startTPButton.setOnClickListener(startTPButtonListener);
 
-        startDPButton = (Button) findViewById(R.id.start_dp_button);
+        startDPButton = (Button) findViewById(R.id.start_destinationpicker_btn);
         assert startDPButton != null;
         startDPButton.setOnClickListener(startDPButtonListener);
 
-        destinationTPButton = (Button) findViewById(R.id.destination_tp_button);
+        destinationTPButton = (Button) findViewById(R.id.destination_timepicker_btn);
         assert destinationTPButton != null;
         destinationTPButton.setOnClickListener(destinationDPButtonListener);
 
-        destinationDPButton = (Button) findViewById(R.id.destination_dp_button);
+        destinationDPButton = (Button) findViewById(R.id.destination_destinationpicker_btn);
         assert destinationDPButton != null;
         destinationDPButton.setOnClickListener(destinationDPButtonListener);
 
