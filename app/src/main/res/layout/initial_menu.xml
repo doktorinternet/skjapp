@@ -5,7 +5,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <Button
-        android:text="Button"
+        android:text="Åka"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button5"
@@ -13,7 +13,7 @@
         android:id="@+id/button6" />
 
     <Button
-        android:text="Button"
+        android:text="Inst."
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button5"
@@ -21,7 +21,7 @@
         android:id="@+id/button7" />
 
     <Button
-        android:text="Button"
+        android:text="Köra"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
