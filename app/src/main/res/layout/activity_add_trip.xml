@@ -14,7 +14,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,8 +27,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/topLinearLayout"
-                android:paddingBottom="0px" >
+                android:id="@+id/topLinearLayout" >
 
                 <EditText
                     android:layout_width="match_parent"
@@ -36,29 +37,6 @@
                     android:id="@+id/start_address_edittext"
                     android:text="@string/label_start_edittext" />
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:layout_width="0px"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_start_timepicker_btn"
-                        android:id="@+id/start_timepicker_btn"
-                        android:onClick="showTimePickerDialog" />
-
-                    <Button
-                        android:layout_width="0px"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_start_datepicker_btn"
-                        android:id="@+id/start_destinationpicker_btn"
-                        android:onClick="showDatePickerDialog" />
-
-                </LinearLayout>
-
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -67,26 +45,18 @@
                     android:id="@+id/destination_address_edittext"
                     android:text="@string/label_destination_edittext" />
 
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_start_timepicker_btn"
+                    android:id="@+id/start_timepicker_btn"
+                    android:onClick="showTimePickerDialog" />
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
-
-                    <Button
-                    android:layout_width="0px"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_destination_timepicker_btn"
-                    android:id="@+id/destination_timepicker_btn"
-                    android:onClick="showTimePickerDialog"/>
-
-                    <Button
-                    android:layout_width="0px"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_destination_datepicker_btn"
-                    android:id="@+id/destination_destinationpicker_btn"
-                    android:onClick="showDatePickerDialog"/>
 
                 </LinearLayout>
 
@@ -96,7 +66,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/topLinearLayout"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/amt_passenger_spinner"
                 android:text="@string/label_passenger_spinner" />
 
@@ -114,7 +85,7 @@
                 android:id="@+id/save_trip_btn"
                 android:layout_below="@+id/select_car_spinner"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="10dp"
                 android:layout_alignParentStart="true" />
 
         </LinearLayout>
