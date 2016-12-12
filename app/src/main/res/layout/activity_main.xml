@@ -22,5 +22,5 @@
         android:layout_below="@+id/textView"
         android:layout_marginStart="24dp"
         android:layout_marginTop="150dp"
-        android:id="@+id/button" />
+        android:id="@+id/start_add_trip_activity_btn" />
 </RelativeLayout>
