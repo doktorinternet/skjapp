@@ -1,8 +1,9 @@
-package gu.itu.skjapp.Presentation.slideDateTimePicker;
+package gu.itu.skjapp.Presentation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -22,6 +23,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import gu.itu.skjapp.R;
+
+import static gu.itu.skjapp.Presentation.AddTripActivity.setTimeButtonText;
 
 /**
  * <p>The {@code DialogFragment} that contains the {@link SlidingTabLayout}
@@ -250,8 +253,12 @@ public class SlideDateTimeDialogFragment extends DialogFragment implements DateF
                             "Listener no longer exists for mOkButton");
                 }
 
-                mListener.onDateTimeSet(new Date(mCalendar.getTimeInMillis()));
-
+                Date d = new Date(mCalendar.getTimeInMillis());
+                mListener.onDateTimeSet(d);
+                setTimeButtonText(getResources()
+                                 .getString(R.string.label_leaving_at)
+                                 .concat(new SimpleDateFormat(" yyyy-MM-dd HH:mm", Locale.US)
+                                 .format(d.getTime())));
                 dismiss();
             }
         });
@@ -309,9 +316,9 @@ public class SlideDateTimeDialogFragment extends DialogFragment implements DateF
         updateTimeTab();
     }
 
-    private void updateDateTab()
+    private void updateDateTab() //TODO här kanske man byter plats på tabbarna?
     {
-        mSlidingTabLayout.setTabText(0, DateUtils.formatDateTime(
+        mSlidingTabLayout.setTabText(1, DateUtils.formatDateTime(
                 mContext, mCalendar.getTimeInMillis(), mDateFlags));
     }
 
@@ -325,17 +332,17 @@ public class SlideDateTimeDialogFragment extends DialogFragment implements DateF
             if (mIs24HourTime)
             {
                 formatter = new SimpleDateFormat("HH:mm");
-                mSlidingTabLayout.setTabText(1, formatter.format(mCalendar.getTime()));
+                mSlidingTabLayout.setTabText(0, formatter.format(mCalendar.getTime()));
             }
             else
             {
                 formatter = new SimpleDateFormat("h:mm aa");
-                mSlidingTabLayout.setTabText(1, formatter.format(mCalendar.getTime()));
+                mSlidingTabLayout.setTabText(0, formatter.format(mCalendar.getTime()));
             }
         }
         else  // display time using the device's default 12/24 hour format preference
         {
-            mSlidingTabLayout.setTabText(1, DateFormat.getTimeFormat(
+            mSlidingTabLayout.setTabText(0, DateFormat.getTimeFormat(
                     mContext).format(mCalendar.getTimeInMillis()));
         }
     }
@@ -371,27 +378,27 @@ public class SlideDateTimeDialogFragment extends DialogFragment implements DateF
         @Override
         public Fragment getItem(int position)
         {
-            switch (position)
+            switch (position) // TODO här kan man byta plats på pickerhjulen
             {
             case 0:
-                DateFragment dateFragment = DateFragment.newInstance(
-                    mTheme,
-                    mCalendar.get(Calendar.YEAR),
-                    mCalendar.get(Calendar.MONTH),
-                    mCalendar.get(Calendar.DAY_OF_MONTH),
-                    mMinDate,
-                    mMaxDate);
-                dateFragment.setTargetFragment(SlideDateTimeDialogFragment.this, 100);
-                return dateFragment;
-            case 1:
                 TimeFragment timeFragment = TimeFragment.newInstance(
-                    mTheme,
-                    mCalendar.get(Calendar.HOUR_OF_DAY),
-                    mCalendar.get(Calendar.MINUTE),
-                    mIsClientSpecified24HourTime,
-                    mIs24HourTime);
+                        mTheme,
+                        mCalendar.get(Calendar.HOUR_OF_DAY),
+                        mCalendar.get(Calendar.MINUTE),
+                        mIsClientSpecified24HourTime,
+                        mIs24HourTime);
                 timeFragment.setTargetFragment(SlideDateTimeDialogFragment.this, 200);
                 return timeFragment;
+            case 1:
+                DateFragment dateFragment = DateFragment.newInstance(
+                        mTheme,
+                        mCalendar.get(Calendar.YEAR),
+                        mCalendar.get(Calendar.MONTH),
+                        mCalendar.get(Calendar.DAY_OF_MONTH),
+                        mMinDate,
+                        mMaxDate);
+                dateFragment.setTargetFragment(SlideDateTimeDialogFragment.this, 100);
+                return dateFragment;
             default:
                 return null;
             }

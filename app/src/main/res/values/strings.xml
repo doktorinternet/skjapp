@@ -12,6 +12,8 @@
     <string name="label_passenger_spinner">Välj antal medresenärer</string>
     <string name="label_car_spinner">Välj bil</string>
     <string name="label_save_trip_btn">Spara annons</string>
-    <string name="label_start_edittext">Skriv in startaddress</string>
-    <string name="label_destination_edittext">Slutadress</string>
+    <string name="label_start_edittext">Where did you come from?</string>
+    <string name="label_destination_edittext">Where did you go?</string>
+    <string name="label_leaving_at">Avgångstid</string>
+    <string name="label_date_format">yy-MM-dd HH:mm</string>
 </resources>

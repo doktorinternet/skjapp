@@ -47,11 +47,12 @@
 
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="37dp"
                     android:text="@string/label_start_timepicker_btn"
                     android:id="@+id/start_timepicker_btn"
-                    android:onClick="showTimePickerDialog" />
+                    android:gravity="start"
+                    android:onClick="showTimePickerDialog"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
 
                 <LinearLayout
                     android:orientation="horizontal"

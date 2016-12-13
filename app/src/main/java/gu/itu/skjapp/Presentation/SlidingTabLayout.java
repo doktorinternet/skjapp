@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation.slideDateTimePicker;
+package gu.itu.skjapp.Presentation;
 
 /*
  * Copyright (C) 2013 The Android Open Source Project

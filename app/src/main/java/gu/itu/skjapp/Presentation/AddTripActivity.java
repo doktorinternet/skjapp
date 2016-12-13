@@ -6,23 +6,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.util.Date;
 
 import gu.itu.skjapp.MainActivity;
-import gu.itu.skjapp.Presentation.slideDateTimePicker.SlideDateTimeListener;
-import gu.itu.skjapp.Presentation.slideDateTimePicker.SlideDateTimePicker;
 import gu.itu.skjapp.R;
-
-import static android.widget.TextView.BufferType.EDITABLE;
-import static gu.itu.skjapp.R.string.label_start_edittext;
 
 // TODO Ändra så enbart en knapp krävs för att välja starttid, beräkna sluttid från googlemaps
 // TODO
 public class AddTripActivity extends AppCompatActivity {
 
-    private Button setTimeButton, saveTripButton;
+    public  static Button setTimeButton; // TODO fixa detta på nge vis
+    private Button saveTripButton;
     private EditText startTextField, stopTextField;
+    private Spinner passengerSpinner, carSpinner;
+
+    public static void setTimeButtonText(String text){
+        setTimeButton.setText(text);
+    }
+
+    void initSpinners(){
+
+    }
 
     @Override
     public void onBackPressed() {
@@ -36,6 +42,7 @@ public class AddTripActivity extends AppCompatActivity {
             new SlideDateTimePicker.Builder(getSupportFragmentManager())
                     .setListener(listener)
                     .setInitialDate(new Date())
+                    .setIs24HourTime(true)
                     .build()
                     .show();
         }
@@ -59,9 +66,6 @@ public class AddTripActivity extends AppCompatActivity {
             }*/
         }
     };
-
-
-
 
     public void setupElementProperties(){
         setTimeButton = (Button) findViewById(R.id.start_timepicker_btn);

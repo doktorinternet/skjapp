@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation.slideDateTimePicker;
+package gu.itu.skjapp.Presentation;
 
 import java.util.Date;
 
