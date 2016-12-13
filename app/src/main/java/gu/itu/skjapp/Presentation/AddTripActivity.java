@@ -1,3 +1,7 @@
+/**
+ * TODO beräkna sluttid från googlemaps
+ * TODO initiera och fixa spinners alternativt gör om, gillar inte idén med spinners, de är långsamma
+ */
 package gu.itu.skjapp.Presentation;
 
 import android.content.Intent;
@@ -13,8 +17,7 @@ import java.util.Date;
 import gu.itu.skjapp.MainActivity;
 import gu.itu.skjapp.R;
 
-// TODO Ändra så enbart en knapp krävs för att välja starttid, beräkna sluttid från googlemaps
-// TODO
+
 public class AddTripActivity extends AppCompatActivity {
 
     public  static Button setTimeButton; // TODO fixa detta på nge vis
@@ -38,7 +41,7 @@ public class AddTripActivity extends AppCompatActivity {
 
     View.OnClickListener setTimeButtonListener = new View.OnClickListener() {
         @Override
-        public void onClick(View v) { // TODO byt plats på tid och datum i dialogen s tid visas först kram
+        public void onClick(View v) {
             new SlideDateTimePicker.Builder(getSupportFragmentManager())
                     .setListener(listener)
                     .setInitialDate(new Date())
