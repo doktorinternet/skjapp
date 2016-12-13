@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 
 import gu.itu.skjapp.Presentation.AddTripActivity;
+import gu.itu.skjapp.Presentation.NewMemberActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button startAddTripActivityBtn;
+    private Button addNewMemberButton;
 
     View.OnClickListener startAddTripActButtonListener = new View.OnClickListener() {
         @Override
@@ -21,14 +23,31 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener addNewMemberButtonListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(getBaseContext(), NewMemberActivity.class);
+            startActivity(i);
+            finish();
+        }
+    };
+
+    void initButtons(){
+        startAddTripActivityBtn = (Button) findViewById(R.id.start_add_trip_activity_btn);
+        assert startAddTripActivityBtn != null;
+        startAddTripActivityBtn.setOnClickListener(startAddTripActButtonListener);
+
+        addNewMemberButton = (Button) findViewById(R.id.add_new_member_activity_btn);
+        assert addNewMemberButton != null;
+        addNewMemberButton.setOnClickListener(addNewMemberButtonListener);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startAddTripActivityBtn = (Button) findViewById(R.id.start_add_trip_activity_btn);
-        assert startAddTripActivityBtn != null;
-        startAddTripActivityBtn.setOnClickListener(startAddTripActButtonListener);
-
+        initButtons();
     }
 }

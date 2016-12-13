@@ -35,7 +35,7 @@
                     android:inputType="textPostalAddress"
                     android:ems="10"
                     android:id="@+id/start_address_edittext"
-                    android:text="@string/label_start_edittext" />
+                    android:hint="@string/label_start_edittext" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -43,15 +43,16 @@
                     android:inputType="textPostalAddress"
                     android:ems="10"
                     android:id="@+id/destination_address_edittext"
-                    android:text="@string/label_destination_edittext" />
+                    android:hint="@string/label_destination_edittext" />
 
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="37dp"
                     android:text="@string/label_start_timepicker_btn"
                     android:id="@+id/start_timepicker_btn"
-                    android:onClick="showTimePickerDialog" />
+                    android:gravity="start"
+                    android:onClick="showTimePickerDialog"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -86,7 +87,8 @@
                 android:layout_below="@+id/select_car_spinner"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="10dp"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                style="@style/Widget.AppCompat.Button.Borderless" />
 
         </LinearLayout>
     </ScrollView>

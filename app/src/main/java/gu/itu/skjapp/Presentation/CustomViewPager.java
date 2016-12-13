@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation.slideDateTimePicker;
+package gu.itu.skjapp.Presentation;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
@@ -112,21 +112,22 @@ public class CustomViewPager extends ViewPager
          // dispatch the event to the DatePicker or TimePicker,
          // depending on which page the ViewPager is currently on.
 
-         switch (getCurrentItem())
+         switch (getCurrentItem())//TODO här bytt plats på casen så att tid visas i vänster tabb
          {
          case 0:
+
+             if (mTimePicker != null)
+                 mTimePicker.dispatchTouchEvent(event);
+
+             break;
+
+         case 1:
 
              if (mDatePicker != null)
                  mDatePicker.dispatchTouchEvent(event);
 
              break;
 
-         case 1:
-
-             if (mTimePicker != null)
-                 mTimePicker.dispatchTouchEvent(event);
-
-             break;
          }
 
          // need this for the ViewPager to scroll horizontally at all
