@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +37,6 @@ import gu.itu.skjapp.R;
 public class NewMemberActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "NewMember";
-
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -277,15 +277,17 @@ public class NewMemberActivity extends AppCompatActivity {
     }
 
     private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
+        return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
-    }
-
+        if(mPasswordView.getText().toString().length() >= 5) {
+            return mPasswordView.getText().toString().equals(mPasswordRepeatView.getText().toString());
+        }else{
+            mPasswordView.setText(R.string.error_incorrect_password);
+            return false;
+        }
     /**
      * Shows the progress UI and hides the login form.
      */
