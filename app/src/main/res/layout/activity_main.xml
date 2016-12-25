@@ -21,15 +21,25 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="150dp"
-        android:id="@+id/start_add_trip_activity_btn" />
+        android:layout_marginTop="24dp"
+        android:id="@+id/start_add_trip_activity_btn"
+        android:onClick=""/>
 
     <Button
-        android:text="Add member"
+        android:text="Start mapActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_new_member_activity_btn"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/start_map_activity_btn" />
+
+    <Button
+        android:text="Start addmemberActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/start_add_trip_activity_btn"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="24dp"
         android:id="@+id/add_new_member_activity_btn" />
 </RelativeLayout>

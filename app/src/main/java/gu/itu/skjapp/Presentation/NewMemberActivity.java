@@ -59,7 +59,7 @@ public class NewMemberActivity extends AppCompatActivity {
     private EditText mFirstNameView,
             mSurNameView,
             mStreetView,
-            mStreetNrView,
+            mStreetNrView, //TODO detta bör vara i samma fält men hitta numret i en metod!!
             mCityView,
             mZipCodeView,
             mEmailView,
@@ -187,9 +187,9 @@ public class NewMemberActivity extends AppCompatActivity {
                 new Member(indata.get(0),
                         indata.get(1),
                         new Address(indata.get(2),
-                                indata.get(3),
-                                indata.get(4),
-                                indata.get(5)),
+                                    indata.get(3),
+                                    indata.get(4),
+                                    indata.get(5)),
                         indata.get(6),
                         indata.get(6),
                         indata.get(7),
@@ -272,7 +272,7 @@ public class NewMemberActivity extends AppCompatActivity {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
-            showProgress(true);
+            //showProgress(true);
         }
     }
 
@@ -281,13 +281,19 @@ public class NewMemberActivity extends AppCompatActivity {
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
-        if(mPasswordView.getText().toString().length() >= 5) {
-            return mPasswordView.getText().toString().equals(mPasswordRepeatView.getText().toString());
+       if(password.length() >= 5 && (!password.contains(mFirstNameView.getText().toString()) ||
+                                      !password.contains(mSurNameView.getText().toString()))){
+
+            return mPasswordView.getText()
+                                .toString()
+                                .equals(mPasswordRepeatView
+                                        .getText()
+                                        .toString());
         }else{
-            mPasswordView.setText(R.string.error_incorrect_password);
+            mPasswordView.setHint(R.string.error_invalid_password); //TODO add toast?
             return false;
         }
+    }
     /**
      * Shows the progress UI and hides the login form.
      */
@@ -324,5 +330,6 @@ public class NewMemberActivity extends AppCompatActivity {
         }
     }
 }
+
 
 
