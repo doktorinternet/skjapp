@@ -12,7 +12,17 @@ import gu.itu.skjapp.Presentation.NewMemberActivity;
 public class MainActivity extends AppCompatActivity {
 
     private Button startAddTripActivityBtn;
+    private Button startMapActivityBtn;
     private Button addNewMemberButton;
+
+    View.OnClickListener startMapActButtonListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(getBaseContext(), MapsActivity.class);
+            startActivity(i);
+            finish();
+        }
+    };
 
     View.OnClickListener startAddTripActButtonListener = new View.OnClickListener() {
         @Override
@@ -33,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
     };
 
     void initButtons(){
+
+        startMapActivityBtn = (Button) findViewById(R.id.start_map_activity_btn);
+        assert startMapActivityBtn != null;
+        startMapActivityBtn.setOnClickListener(startMapActButtonListener);
+
         startAddTripActivityBtn = (Button) findViewById(R.id.start_add_trip_activity_btn);
         assert startAddTripActivityBtn != null;
         startAddTripActivityBtn.setOnClickListener(startAddTripActButtonListener);
