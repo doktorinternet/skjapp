@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation;
+package gu.itu.skjapp.presentation;
 
 /*
  * Copyright (C) 2013 The Android Open Source Project

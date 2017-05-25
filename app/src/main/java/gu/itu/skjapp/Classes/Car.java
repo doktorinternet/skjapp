@@ -4,7 +4,7 @@
  * used by members.
  *
  */
-package gu.itu.skjapp.Classes;
+package gu.itu.skjapp.classes;
  
  
 public class Car{

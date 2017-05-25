@@ -4,7 +4,7 @@
  * Add functionaliy for exceptions?
  *
  */
-package gu.itu.skjapp.Classes;
+package gu.itu.skjapp.classes;
 
  
 public class Error{

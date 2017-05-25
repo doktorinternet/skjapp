@@ -1,5 +1,14 @@
 <resources>
+
+    <!-- Strings related to login screen -->
     <string name="app_name">Skjapp</string>
+    <string name="hint_username_input">Användarnamn</string>
+    <string name="hint_password_input">Lösenord</string>
+    <string name="label_add_member_btn">Inte medlem?</string>
+    <string name="label_login_btn">Logga in</string>
+
+
+    <!-- Strings related to profile screen -->
     <string name="k_r">Kör</string>
     <string name="res">Res</string>
 

@@ -5,7 +5,7 @@
  *	information about specific trips to and from geographical places.
  *
  */
-package gu.itu.skjapp.Classes;
+package gu.itu.skjapp.classes;
  
 public class Trip{
 	

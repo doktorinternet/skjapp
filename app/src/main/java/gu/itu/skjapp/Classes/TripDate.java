@@ -3,7 +3,7 @@
  * Class extends Date, implements functionality for class Error.
  *
  */
-package gu.itu.skjapp.Classes;
+package gu.itu.skjapp.classes;
 
 import java.util.Date;
 

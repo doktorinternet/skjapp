@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation;
+package gu.itu.skjapp.presentation;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

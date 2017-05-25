@@ -1,6 +1,4 @@
-package gu.itu.skjapp.Model;
-
-import java.util.ArrayList;
+package gu.itu.skjapp.model;
 
 public class DataBaseHandler{
 	

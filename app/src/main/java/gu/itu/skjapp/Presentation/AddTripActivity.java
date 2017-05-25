@@ -2,7 +2,7 @@
  * TODO beräkna sluttid från googlemaps
  * TODO initiera och fixa spinners alternativt gör om, gillar inte idén med spinners, de är långsamma
  */
-package gu.itu.skjapp.Presentation;
+package gu.itu.skjapp.presentation;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.github.jjobes.slidedatetimepicker.SlideDateTimeListener;
+import com.github.jjobes.slidedatetimepicker.SlideDateTimePicker;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation;
+package gu.itu.skjapp.presentation;
 
 import java.util.Date;
 

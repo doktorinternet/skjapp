@@ -1,5 +1,6 @@
 package gu.itu.skjapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -22,10 +23,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(i);
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+           // mMap.setMyLocationEnabled(true);
         // Add a marker in Sydney, Australia, and move the camera.
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));

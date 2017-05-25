@@ -8,7 +8,8 @@ package gu.itu.skjapp;
  * TODO Hantera inmatad information i GUI
  * Todo Remake error to simpleton class somehow. Make all other constructors take Error object reference somehow
  * TODO GAMEIFICATE?!?!?! HUR :D:DD
- *
+ * TODO searchtripsactivity
+ * TODO viewtripsactivity
  */
 
 public class NOTESandTODO{}

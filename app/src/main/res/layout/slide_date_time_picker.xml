@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <gu.itu.skjapp.Presentation.SlidingTabLayout
+    <gu.itu.skjapp.presentation.SlidingTabLayout
         android:id="@+id/slidingTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <gu.itu.skjapp.Presentation.CustomViewPager
+    <gu.itu.skjapp.presentation.CustomViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-        android:name=".Presentation.AddTripActivity"
+        android:name=".presentation.AddTripActivity"
         android:label="@string/title_activity_add_trip"
         android:parentActivityName=".MainActivity"
         android:theme="@style/AppTheme.NoActionBar" />
@@ -74,7 +74,7 @@
         android:value="@string/google_maps_key" />-->
 
         <activity
-        android:name=".Presentation.ShowAvailableTrips"
+        android:name=".presentation.ShowAvailableTrips"
         android:label="@string/title_activity_show_available_trips" />
         <!--
         ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -82,7 +82,15 @@
         -->
 
         <activity
-            android:name=".Presentation.NewMemberActivity"
+            android:name=".presentation.NewMemberActivity"
+            android:label="@string/title_activity_new_member"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gu.itu.skjapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.ProfileActivity"
             android:label="@string/title_activity_new_member"
             android:parentActivityName=".MainActivity">
             <meta-data

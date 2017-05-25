@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Presentation;
+package gu.itu.skjapp.presentation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -24,7 +24,7 @@ import android.widget.Button;
 
 import gu.itu.skjapp.R;
 
-import static gu.itu.skjapp.Presentation.AddTripActivity.setTimeButtonText;
+import static gu.itu.skjapp.presentation.AddTripActivity.setTimeButtonText;
 
 /**
  * <p>The {@code DialogFragment} that contains the {@link SlidingTabLayout}

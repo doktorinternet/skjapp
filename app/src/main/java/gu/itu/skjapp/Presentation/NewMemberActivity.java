@@ -5,7 +5,7 @@
  * TODO Dialog/alert om vad för "fel" som hänt vid input
  * TODO säkerställa att input är korrekt
  */
-package gu.itu.skjapp.Presentation;
+package gu.itu.skjapp.presentation;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -25,8 +25,8 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
-import gu.itu.skjapp.Classes.*;
-import gu.itu.skjapp.Classes.Error;
+import gu.itu.skjapp.classes.*;
+import gu.itu.skjapp.classes.Error;
 import gu.itu.skjapp.MainActivity;
 import gu.itu.skjapp.R;
 

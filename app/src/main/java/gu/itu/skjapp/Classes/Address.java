@@ -3,7 +3,7 @@
  * Creates an object address to assign to members and trips 	
  * 																
  */															
-package gu.itu.skjapp.Classes;
+package gu.itu.skjapp.classes;
 
 public class Address{
 	

@@ -1,4 +1,4 @@
-package gu.itu.skjapp.Control;
+package gu.itu.skjapp.control;
 
 /**
  * Created by Anton on 2016-12-13.

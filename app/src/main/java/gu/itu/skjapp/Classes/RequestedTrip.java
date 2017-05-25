@@ -4,7 +4,7 @@
  * trips requested by passengers.
  *
  */
-package gu.itu.skjapp.Classes;
+package gu.itu.skjapp.classes;
 
 import java.util.ArrayList;
 
