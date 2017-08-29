@@ -10,6 +10,7 @@ package gu.itu.skjapp;
  * TODO GAMEIFICATE?!?!?! HUR :D:DD
  * TODO searchtripsactivity
  * TODO viewtripsactivity
+ * TODO LÖS EN TOOLBAR!!! :D
  */
 
 public class NOTESandTODO{}

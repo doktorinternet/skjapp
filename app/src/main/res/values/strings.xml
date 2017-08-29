@@ -9,8 +9,8 @@
 
 
     <!-- Strings related to profile screen -->
-    <string name="k_r">Kör</string>
-    <string name="res">Res</string>
+    <string name="label_drive_btn">Köra</string>
+    <string name="label_travel_btn">Resa</string>
 
     <!-- Strings related to add trip -->
     <string name="title_activity_add_trip">Lägg till resa</string>
